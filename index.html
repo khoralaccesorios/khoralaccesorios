@@ -3,53 +3,30 @@
 <head>
   <meta charset="utf-8">
   <title>Khoral Accesorios</title>
-  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <style media="screen">
+    body {
+      background: #FBCEF5;
+    }
+    img {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
+      display: block;
+    }
+    img#responsive {
+      display: none;
+    }
+    @media screen and (max-width: 900px) {
+      img#responsive {
+        display: block;
+      }
+    }
+  </style>
 </head>
 <body>
-
-<section id="khoralaccesorios" class="page-title-lg"
-    data-bg
-    data-bg-img-desktop="img/desktop.jpg"
-    data-bg-img-mobile="img/movil.jpg">
-</section>
-
-<!--
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-<div class="container">
-  <div id="main-img" />
-</div>
-<img src="img/desktop.jpg" alt="index img" width="80%" height="80%">
--->
+  <img src="img/movil.jpg" alt="movil version" id="responsive">
+  <img src="img/desktop.jpg" alt="fondo">
 
 </body>
-
-<script type="text/javascript">
-  var imageBgs = document.querySelectorAll('[data-bg]');
-  var screenWidth = window.innerWidth;
-  var screenHeight = window.innerHeight;
-
-  console.log(screenWidth);
-  console.log(screenHeight);
-
-
-  for(var i=0; i<imageBgs.length; i++) {
-      if( screenWidth < 1024 ){
-          // Load mobile image
-          imageBgs[i].style.width = "1023px";
-          imageBgs[i].style.height = "1818px";
-          imageBgs[i].style.backgroundRepeat = "no-repeat"
-          imageBgs[i].style.margin = "auto";
-          imageBgs[i].style.backgroundImage = 'url('+imageBgs[i].getAttribute('data-bg-img-mobile')+')';
-
-      } else if( screenWidth >= 1024 ) {
-          // Desktop
-          imageBgs[i].style.width = "1156px";
-          imageBgs[i].style.height = "650px";
-          imageBgs[i].style.backgroundRepeat = "no-repeat"
-          imageBgs[i].style.margin = "auto";
-          imageBgs[i].style.backgroundImage = 'url('+imageBgs[i].getAttribute('data-bg-img-desktop')+')';
-      }
-  }
-</script>
 
 </html>
