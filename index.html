@@ -17,7 +17,11 @@
       display: none;
     }
     @media screen and (max-width: 1024px) {
+      img#normal {
+        display: none;
+      }
       img#responsive {
+        max-width: 100%;
         display: block;
       }
     }
@@ -25,7 +29,7 @@
 </head>
 <body>
   <img src="img/movil.jpg" alt="movil version" id="responsive">
-  <img src="img/desktop.jpg" alt="fondo">
+  <img src="img/desktop.jpg" alt="fondo" id="normal">
 
 </body>
 
